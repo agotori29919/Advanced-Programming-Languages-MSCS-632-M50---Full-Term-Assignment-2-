@@ -1,0 +1,9 @@
+// JavaScript example demonstrating dynamic typing and closures
+function makeMultiplier(factor) {
+    return function(number) {
+        return factor * number;  // 'factor' is captured from the outer scope
+    };
+}
+
+const double = makeMultiplier(2);
+console.log("Double of 5 is", double(5));
