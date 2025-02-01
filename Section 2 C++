@@ -1,0 +1,16 @@
+#include <iostream>
+#include <functional>
+using namespace std;
+
+std::function<int(int)> makeMultiplier(int factor) {
+    // Lambda function captures 'factor' by value.
+    return [factor](int number) {
+        return factor * number;
+    };
+}
+
+int main() {
+    auto doubleFunc = makeMultiplier(2);
+    std::cout << "Double of 5 is " << doubleFunc(5) << std::endl;
+    return 0;
+}
