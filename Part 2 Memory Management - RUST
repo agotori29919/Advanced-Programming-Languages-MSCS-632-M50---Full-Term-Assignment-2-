@@ -1,0 +1,9 @@
+fn main() {
+    // Dynamically create a vector; ownership is clear and automatic.
+    let mut numbers = Vec::new();
+    for i in 0..10 {
+        numbers.push(i);
+    }
+    println!("Numbers: {:?}", numbers);
+    // When 'numbers' goes out of scope, Rust automatically frees the memory.
+}
