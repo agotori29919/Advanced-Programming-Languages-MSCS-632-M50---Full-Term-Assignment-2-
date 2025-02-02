@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    // Dynamically allocate an array.
+    int* numbers = new int[10];
+    for (int i = 0; i < 10; i++) {
+        numbers[i] = i;
+    }
+    for (int i = 0; i < 10; i++) {
+        cout << numbers[i] << " ";
+    }
+    cout << endl;
+    // Manually free the allocated memory.
+    delete[] numbers;
+    return 0;
+}
