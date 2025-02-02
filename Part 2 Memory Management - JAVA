@@ -1,0 +1,11 @@
+public class MemoryExample {
+    public static void main(String[] args) {
+        // Dynamically allocate an array.
+        int[] numbers = new int[10];
+        for (int i = 0; i < numbers.length; i++) {
+            numbers[i] = i;
+        }
+        System.out.println("Numbers: " + java.util.Arrays.toString(numbers));
+        // Memory is automatically managed by Java's garbage collector.
+    }
+}
